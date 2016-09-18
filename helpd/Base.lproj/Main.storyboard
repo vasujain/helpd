@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,63 +18,113 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="I0Y-qh-jDm"/>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="H.E.L.P.D" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3MG-QY-1hv">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="82" id="fkW-Y4-4uf"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="I0Y-qh-jDm">
+                                <frame key="frameInset" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="H.E.L.P.D" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3MG-QY-1hv">
+                                <frame key="frameInset" minX="92" minY="58" width="223" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bv0-Mr-EoH">
-                                <frame key="frameInset" minX="64" minY="173" width="247" height="128"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzc-vb-bzt">
+                                <frame key="frameInset" minX="79" minY="370" width="236" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzc-vb-bzt">
-                                <frame key="frameInset" minX="93" minY="376" width="189" height="30"/>
                                 <state key="normal" title="Send Text to H.E.L.P.D"/>
                                 <connections>
                                     <action selector="sendMsgButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xfj-lG-cF9"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="© 2016 H.E.L.P.D." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ck-vc-rEC">
-                                <frame key="frameInset" minX="104" minY="638" width="207" height="21"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bv0-Mr-EoH">
+                                <frame key="frameInset" minX="71" minY="167" width="247" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Ju-qV-fn5">
+                                <frame key="frameInset" minX="16" minY="560" width="63" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="gZV-R2-LxX" appends="YES" id="ZbZ-lo-a7l"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vqF-8N-QgJ">
+                                <frame key="frameInset" minX="203" minY="560" width="63" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="z7V-XL-fIU" appends="YES" id="LId-Pb-o6A"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LU6-J4-6Wm">
+                                <frame key="frameInset" minX="296" minY="560" width="63" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="rwT-re-Rq3" appends="YES" id="FWT-1Y-RbK"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eZr-LN-Ibe">
+                                <frame key="frameInset" minX="110" minY="560" width="63" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="mF1-6d-Dg1" appends="YES" id="wtN-rb-9b6"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" layoutMarginsFollowReadableWidth="YES" text="  © 2016 H.E.L.P.D.  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ck-vc-rEC">
+                                <frame key="frameInset" minX="92" minY="641" width="218" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="3MG-QY-1hv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="38" id="4HI-sd-cdR"/>
-                            <constraint firstItem="I0Y-qh-jDm" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="7hu-ZM-a3G"/>
-                            <constraint firstItem="qzc-vb-bzt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="77" id="Kvf-EX-HiA"/>
-                            <constraint firstItem="I0Y-qh-jDm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MsY-3q-BFH"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qzc-vb-bzt" secondAttribute="bottom" constant="250" id="PUK-cQ-HfI"/>
-                            <constraint firstItem="I0Y-qh-jDm" firstAttribute="centerX" secondItem="qzc-vb-bzt" secondAttribute="centerX" id="Xnx-HR-a7I"/>
-                            <constraint firstAttribute="trailing" secondItem="I0Y-qh-jDm" secondAttribute="trailing" id="Xzz-GD-5oe"/>
-                            <constraint firstItem="3MG-QY-1hv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="88" id="dSI-ri-KUd"/>
-                            <constraint firstItem="I0Y-qh-jDm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wxx-rf-l8U"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="bgImage" destination="I0Y-qh-jDm" id="gIB-7A-ez7"/>
+                        <outlet property="emailIcon" destination="LU6-J4-6Wm" id="JP8-rW-10K"/>
+                        <outlet property="fbIcon" destination="7Ju-qV-fn5" id="Moq-2z-yay"/>
+                        <outlet property="githubIcon" destination="vqF-8N-QgJ" id="SU7-u8-LPT"/>
                         <outlet property="helpdHeaderLabel" destination="3MG-QY-1hv" id="QP8-cU-9Ag"/>
                         <outlet property="inputTextHome" destination="Bv0-Mr-EoH" id="nTF-C8-aT8"/>
                         <outlet property="labelCopyRight" destination="1Ck-vc-rEC" id="jkv-RA-MwY"/>
+                        <outlet property="sendTextButton" destination="qzc-vb-bzt" id="iq8-hc-3g7"/>
+                        <outlet property="twitterIcon" destination="eZr-LN-Ibe" id="1ek-G4-ndb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="gZV-R2-LxX">
+                    <connections>
+                        <action selector="icon1_tap_action:" destination="BYZ-38-t0r" id="Tw8-AJ-kHd"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="mF1-6d-Dg1">
+                    <connections>
+                        <action selector="icon2_tap_action:" destination="BYZ-38-t0r" id="PLq-ZE-eIm"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="z7V-XL-fIU">
+                    <connections>
+                        <action selector="icon3_tapped_action:" destination="BYZ-38-t0r" id="jhJ-RF-CW0"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="rwT-re-Rq3">
+                    <connections>
+                        <action selector="icon4_tapped_action:" destination="BYZ-38-t0r" id="AjY-Sb-Xuj"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="129.98500749625188"/>
         </scene>
     </scenes>
     <resources>
-        <image name="background.jpg" width="240" height="427"/>
+        <image name="bg.jpg" width="564" height="827"/>
     </resources>
 </document>
